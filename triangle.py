@@ -1,3 +1,5 @@
+import unittest
+
 def area(a, h):
     '''
     Функция получает на вход два числа a и h - длина стороны треугольника и 
@@ -13,3 +15,17 @@ def perimeter(a, b, c):
     Возвращает число - периметр треугольника со сторонами **a**, **b** и **c**.
     '''
     return a + b + c 
+
+class RectangleTestCase(unittest.TestCase):
+    def test_null_area(self):
+        res = area(1000, 0)
+        self.assertEqual(res, 0)
+    def test_null_perimeter(self):
+        res = perimeter(0,0,0)
+        self.assertEqual(res, 0)
+    def test_area(self):
+        res = area(30,4)
+        self.assertEqual(res, 60)
+    def test_perimeter(self):
+        res = perimeter(30, 30 , 30)
+        self.assertEqual(res, 90)
