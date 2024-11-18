@@ -21,7 +21,7 @@ def diagonal(a):
     Возвращает число - диоганаль квадрата со стороной a.
     '''
     return a * (2 ** 0.5)
-
+print(diagonal(4), diagonal(5))
 class RectangleTestCase(unittest.TestCase):
     def test_null_area(self):
         res = area(0)
